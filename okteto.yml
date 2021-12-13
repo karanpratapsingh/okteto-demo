@@ -1,6 +1,0 @@
-name: app
-command: ["bash"]
-forward:
-  - 4000:4000
-sync:
-  - .:/app

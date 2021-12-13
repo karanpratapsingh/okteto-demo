@@ -12,10 +12,10 @@ func main() {
 	r := mux.NewRouter()
 
 	r.HandleFunc("/api", func(w http.ResponseWriter, r *http.Request) {
-		data := "Hello Okteto"
+		data := "Hello Okteto!"
 		json.NewEncoder(w).Encode(&data)
 	})
 
 	log.Println("Server is up!")
-	log.Fatalln(http.ListenAndServe(":4000", r))
+	log.Fatalln(http.ListenAndServe(":8080", r))
 }
