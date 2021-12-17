@@ -1,0 +1,16 @@
+name: okteto-demo
+image: okteto/golang:1
+command: bash
+securityContext:
+  capabilities:
+    add:
+    - SYS_PTRACE
+sync:
+- .:/usr/src/app
+forward:
+- 2345:2345
+- 8080:8080
+autocreate: true
+volumes:
+- /go/pkg/
+- /root/.cache/go-build/

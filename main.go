@@ -12,7 +12,7 @@ func main() {
 	r := mux.NewRouter()
 
 	r.HandleFunc("/api", func(w http.ResponseWriter, r *http.Request) {
-		data := "Hello Okteto!"
+		data := "Hello, from Okteto Cloud!"
 		json.NewEncoder(w).Encode(&data)
 	})
 
